@@ -1,0 +1,110 @@
+.footer-color {
+    background-color: var(--background-color-footer);
+    padding-top: 60px;
+    padding-bottom: 60px;
+    height: 252px;
+    display: flex;
+    display: block;
+}
+
+.footer-web-studio-color {
+    color: var(--primary-light-color);
+}
+
+.text,
+.footer-address,
+.footer-contacts {
+    @include font (null, 14px, 1.71, 0.03em);
+    font-style: normal;
+}
+
+.footer-address {
+    color: var(--primary-light-color);
+    margin-bottom: 9px;
+    margin-top: 20px;
+    min-width: 231px;
+}
+
+.footer-contacts {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.header-email-footer,
+.header-tel-footer {
+    @include font (null, 14px, 1.71, 0.03em);
+    color: var(--footer-rgba);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    &:hover {
+        color: var(--accent-text-color);
+    }
+    &:focus {
+        color: var(--accent-text-color);
+    }
+}
+
+.header-email-footer {
+    margin-bottom: 9px;
+}
+
+.contact-address {
+    max-width: 231px;
+}
+
+.third-title-footer {
+    @include font (null, 14px, 1.14, 0.03em);
+    text-transform: uppercase;
+    color: var(--primary-light-color);
+    margin-top: 12px;
+    margin-bottom: 20px;
+}
+
+.footer-social-media-link {
+    width: 44px;
+    height: 44px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    &:hover {
+        background-color: var(--accent-text-color);
+    }
+    &:focus {
+        background-color: var(--accent-text-color);
+    }
+    &:hover .footer-social-media-list-icon {
+        fill: #FFFFFF;
+    }
+    
+    &:focus .footer-social-media-list-icon {
+        fill: #FFFFFF;
+    }
+}
+
+.footer-social-media-list-icon {
+    fill: var(--primary-light-color);
+}
+
+.footer-social-media-iteam {
+    margin-right: 10px;
+    & item:last-child {
+        margin-right: 0px;
+    }
+}
+
+.footer-social-media-list {
+    display: flex;
+}
+
+.contact-wrap .conteiner {
+    display: flex;
+}
+
+.footer-logo {
+    margin-right: 70px;
+}
+
+.contacts-soc {
+    margin-right: 93px;
+}

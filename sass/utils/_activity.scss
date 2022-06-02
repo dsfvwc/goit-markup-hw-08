@@ -1,0 +1,39 @@
+.profil__list__iteam {
+    margin-right: var(--margin-30);
+    & item:last-child {
+        margin-right: 0;
+    }
+}
+
+.profil__list {
+    display: flex;
+    flex-basis: calc(100% - 90px/ 3);
+}
+
+.about-us {
+    padding-bottom: var(--margin-94);
+}
+
+.second-title {
+    @include font (700, 36px, 1.17, 0.03em);
+    text-align: center;
+    color: var(--primary-text-color);
+}
+
+.second-title-work {
+    margin-bottom: 50px;
+}
+
+.img-antenna-link,
+.img-clock-link,
+.img-diagram-link,
+.img-astronaut-link {
+    width: 270px;
+    height: 120px;
+    background-color: #F5F4FA;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+}

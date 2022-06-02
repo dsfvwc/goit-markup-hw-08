@@ -1,0 +1,217 @@
+label, 
+textarea {
+    display: block;
+}
+
+.backdrop {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    &.is-hidden .modal {
+        transform: scale(0) rotate(200deg);
+        opacity: 1;
+    }
+}
+
+.modal {
+    width: 528px;
+    min-height: 581px;
+    background-color: var(--primary-light-color);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
+        0px 1px 1px rgba(0, 0, 0, 0.14),
+        0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    position: absolute;
+    transform: scale(1);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    padding: 40px;
+}
+
+.modal-close-btn {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: var(--primary-light-color);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    &:hover .x-icon,
+    &:focus .x-icon {
+        fill: var(--accent-text-color);
+    }
+}
+
+.x-icon {
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    fill: #000;
+}
+
+.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+}
+
+.mailing-list-btn {
+    @include font (700, 16px, null, 0.06em);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    font-family: 'Roboto';
+    align-items: center;
+    text-align: center;
+    padding: 10px 28px 10px 29px;
+    display: inline-flex;
+    margin-left: 12px;
+    border: 0;
+    &:hover,
+    &:focus {
+        background-color: var(--send-button);
+    }
+}
+
+.mailing-list-icon {
+    margin-left: 10px;
+}
+
+.label-email-border {
+    width: 358px;
+    height: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 16px;
+    color: #FFFFFF;
+    &:valid {
+        background-color: transparent;
+    }
+    &:invalid {
+        background-color: transparent;
+    }
+    &::placeholder {
+        @include font (400, 16px, 1.25, 0.03em);
+        font-family: 'Roboto';
+        font-style: normal;
+        display: flex;
+        color: rgba(255, 255, 255, 0.6);
+    }
+}
+
+.mailing {
+    display: inline-flex;
+}
+
+.modal-title {
+    @include font (700, 20px, 1.15, 0.03em);
+    font-family: 'Roboto';
+    font-style: normal;
+    text-align: center;
+    color: var(--primary-text-color);
+    margin-bottom: 12px;
+}
+
+.modal-input {
+    width: 100%;
+    height: 40px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 42px;
+    display: inline-flex;
+    outline: none;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    &:focus,
+    &:hover {
+        border-color: var(--accent-text-color);
+    }
+    &:focus+.modal-icon-name,
+    &:focus+.modal-icon-tel,
+    &:focus+.modal-icon-email,
+    &:hover+.modal-icon-name,
+    &:hover+.modal-icon-tel,
+    &:hover+.modal-icon-email {
+        fill: var(--accent-text-color);
+    }
+}
+
+.modal-input-coment {
+    width: 100%;
+    height: 120px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    margin-top: 4px;
+    padding: 12px 16px;
+    color: rgba(117, 117, 117, 0.5);
+    resize: none;
+    outline: none;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    &:focus,
+    &:hover {
+        border-color: var(--accent-text-color);
+    }
+    &::placeholder {
+        @include font (null, 14px, 1.14, 0.01em);
+        font-family: 'Roboto';
+        width: 416px;
+        height: 96px;
+        color: rgba(117, 117, 117, 0.5);
+        position: absolute;
+    }
+}
+
+.modal-input-wrap {
+    position: relative;
+    margin-top: 4px;
+}
+
+.modal-icon-name,
+.modal-icon-tel,
+.modal-icon-email {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.input-text {
+    @include font (null, 12px, 1.17, 0.01em);
+    height: 14px;
+    color: #757575;
+}
+
+.input-conteiner {
+    margin-bottom: 10px;
+}
+
+.input-conteiner-coment {
+    margin-bottom: 20px;
+}
+
+.modal-send-btn {
+    @include font (700, 16px, 1.88, 0.06em);
+    font-family: 'Roboto';
+    display: flex;
+    align-items: center;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 55px;
+    padding-left: 56px;
+    border-radius: 4px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border: 0;
+    &:hover,
+    &:focus {
+        background-color: var(--send-button);
+    }
+}

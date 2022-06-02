@@ -1,0 +1,37 @@
+.clients {
+    padding: 94px 0px;
+}
+
+.clients-second-title {
+    margin-bottom: 50px;
+}
+
+.clients-logo__link {
+    width: 170px;
+    height: 92px;
+    border: 1px solid #AFB1B8;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    &:hover {
+        border: 1px solid var(--accent-text-color);
+        & .logo-icon {
+            fill: var(--accent-text-color);
+        }
+    }
+    &:focus .logo-icon {
+        fill: var(--accent-text-color);
+    }
+}
+
+.logo-icon {
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    fill: #AFB1B8;
+}
+
+.clients-logo__list {
+    display: flex;
+    justify-content: space-between;
+}

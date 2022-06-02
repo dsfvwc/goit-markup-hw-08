@@ -1,0 +1,27 @@
+@mixin font($fw, $fs, $lh, $ls) {
+    font-weight: $fw;
+    font-size: $fs;
+    line-height: $lh;
+    letter-spacing: $ls;
+}
+
+body {
+    font-family: "Roboto", Tahoma, sans-serif;
+    color: var(--primary-text-color);
+}
+
+:root {
+    --primary-text-color: #212121;
+    --accent-text-color: #2196F3;
+    --basic-text-color: #757575;
+    --primary-light-color: #FFFFFF;
+    --primary-dark-color: #000000;
+    --background-color-footer: #2F303A;
+    --background-color-section: #F5F4FA;
+    --background-color-filter: #F5F4FA;
+    --footer-rgba: rgba(255, 255, 255, 0.6);
+    --send-button: #188CE8;
+    --margin-94: 94px;
+    --margin-10: 10px;
+    --margin-30: 30px;
+}
